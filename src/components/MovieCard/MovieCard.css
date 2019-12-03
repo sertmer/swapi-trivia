@@ -1,16 +1,26 @@
 .MovieCard {
-  border: 1px solid lavender;
+  border: 1px solid #f9d71c;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: 2%;
   width: 20%;
+  border-radius: 5px;
+  height: 40vh;
+  justify-content: space-around;
+  background-color: #1a1a1a;
 }
 
-button {
+.characters-button {
   width: 40%;
+  margin: 1%;
+  border-radius: 5px;
 }
 
 h2 {
   text-align: center;
+}
+
+h3 {
+  font-size: larger;
 }
