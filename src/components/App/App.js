@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from '../Header/Header'
 import LandingForm from '../LandingForm/LandingForm'
+import MovieContainer from '../MovieContainer/MovieContainer'
 
 
 class App extends Component {
@@ -26,6 +27,10 @@ class App extends Component {
       <div className="App">
         <Header />
         <LandingForm />
+        <MovieContainer 
+          className='MovieContainer'
+          movies={this.state.movies}
+        />
       </div>
     )
   }

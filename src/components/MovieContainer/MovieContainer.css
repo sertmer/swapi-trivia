@@ -1,0 +1,5 @@
+/* movie container test */
+main {
+  display: flex;
+  flex-flow: row wrap;
+}
