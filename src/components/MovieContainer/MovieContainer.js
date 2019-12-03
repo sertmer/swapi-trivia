@@ -3,7 +3,7 @@ import './MovieContainer.css'
 import MovieCard from '../MovieCard/MovieCard'
 
 const MovieContainer = ({ movies }) => {
-  let movieDetails = movies.map(movie => {
+  let movieCards = movies.map(movie => {
     return (
       <MovieCard 
         className='MovieCard'
@@ -16,7 +16,7 @@ const MovieContainer = ({ movies }) => {
   })
   return (
     <main>
-      {movieDetails}
+      {movieCards}
     </main>
   )
 }
