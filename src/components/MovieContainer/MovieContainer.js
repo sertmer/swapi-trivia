@@ -6,6 +6,7 @@ const MovieContainer = ({ movies }) => {
   let movieDetails = movies.map(movie => {
     return (
       <MovieCard 
+        className='MovieCard'
         key={movie.episode_id}
         episode={movie.episode_id}
         title={movie.title}
