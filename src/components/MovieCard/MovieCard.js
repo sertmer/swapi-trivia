@@ -3,9 +3,12 @@ import './MovieCard.css'
 
 const MovieCard = ({ episode, title, releaseDate }) => {
   return (
-    <article>
-      <h2>Episode {episode}: {title}</h2>
-      <p>Released: {releaseDate}</p>
+    <article className='MovieCard'>
+      <h2>Episode {episode}:</h2>
+      <h3>{title}</h3>
+      <p>Released:</p>
+      <p>{releaseDate}</p>
+      <button>View Characters</button>
     </article>
   )
 }
