@@ -9,7 +9,10 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      movies: []
+      movies: [],
+      name: '',
+      quote: '',
+      rank: '',
     }
   }
   
@@ -22,15 +25,25 @@ class App extends Component {
       })
   }
 
+  updateState = (statesObj) => {
+    this.setState(statesObj);
+  }
+
   render() {
     return (
       <div className="App">
-        <Header />
-        <LandingForm />
+
+        <Header 
+        name={this.state.name}
+        rank={this.state.rank}
+        quote={this.state.quote}
+        />
+        <LandingForm updateState={this.updateState}/>
         <MovieContainer 
           className='MovieContainer'
           movies={this.state.movies}
         />
+
       </div>
     )
   }
