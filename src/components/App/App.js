@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
+import Header from '../Header/Header'
+import LandingForm from '../LandingForm/LandingForm'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>hello</h1>
-      </header>
+      <Header />
+      <LandingForm />
     </div>
   );
 }
