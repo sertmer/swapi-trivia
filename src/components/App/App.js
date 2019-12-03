@@ -11,6 +11,15 @@ class App extends Component {
       movies: []
     }
   }
+  
+  componentDidMount() {
+    fetch('https://swapi.co/api/films/')
+      .then(res => res.json())
+      .then(data => {
+        let sortedMovies = data.results.sort((a, b) => a.episode_id - b.episode_id)
+        this.setState({movies: sortedMovies})
+      })
+  }
 
   render() {
     return (
