@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from '../Header/Header'
 import LandingForm from '../LandingForm/LandingForm'
+import MovieContainer from '../MovieContainer/MovieContainer'
 
 
 class App extends Component {
@@ -31,12 +32,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <Header 
         name={this.state.name}
         rank={this.state.rank}
         quote={this.state.quote}
         />
         <LandingForm updateState={this.updateState}/>
+        <MovieContainer 
+          className='MovieContainer'
+          movies={this.state.movies}
+        />
+
       </div>
     )
   }
