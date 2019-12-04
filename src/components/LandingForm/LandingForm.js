@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './LandingForm.css'
+import './LandingForm.scss'
 
 class LandingForm extends Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import Header from '../Header/Header'
 import LandingForm from '../LandingForm/LandingForm'
 import MovieContainer from '../MovieContainer/MovieContainer'
@@ -12,7 +12,7 @@ class App extends Component {
       movies: [],
       name: '',
       quote: '',
-      rank: '',
+      rank: ''
     }
   }
   
@@ -29,6 +29,10 @@ class App extends Component {
     this.setState(statesObj);
   }
 
+  signOut = () => {
+    this.setState({ name: '', quote: '', rank: '' })
+  }
+
   render() {
     return (
       <div className="App">
@@ -37,6 +41,7 @@ class App extends Component {
         name={this.state.name}
         rank={this.state.rank}
         quote={this.state.quote}
+        signOut={this.signOut}
         />
         <LandingForm updateState={this.updateState}/>
         <MovieContainer 
