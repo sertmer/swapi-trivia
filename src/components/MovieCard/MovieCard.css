@@ -24,3 +24,8 @@ h2 {
 h3 {
   font-size: larger;
 }
+
+img {
+  height: 240px;
+  width: 200px;
+}
