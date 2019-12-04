@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match the snapshot 1`] = `
+<nav>
+  <h1>
+    Star Wars Trivia Database
+  </h1>
+  <p>
+     
+  </p>
+  <p />
+</nav>
+`;
