@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './LandingForm.scss'
+import { Link } from 'react-router-dom'
 
 class LandingForm extends Component {
   constructor(props) {
@@ -61,10 +62,12 @@ class LandingForm extends Component {
             className="form_button" 
             disabled  
           >Submit</button>}
-          {this.state.isFinished && <button
+          {this.state.isFinished && <Link to='/movies'>
+          <button
             className="form_button"
             onClick={this.submitInfo}
-          >Submit</button>}
+          >Submit</button>
+            </Link>}
       </div>
     )
   }
