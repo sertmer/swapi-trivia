@@ -49,15 +49,17 @@ class App extends Component {
           />
         </header>
         <main className="App">
-          {/* <MovieContainer 
-            className='MovieContainer'
-            movies={this.state.movies}
-          /> */}
           <Route exact path='/' render={() => 
             <LandingForm 
-              updateState={this.updateState} 
-              />} 
-            />
+            updateState={this.updateState} 
+            />} 
+          />
+          <Route path='/movies' render={() =>
+            <MovieContainer 
+            className='MovieContainer'
+            movies={this.state.movies}
+          />}
+          />
   
         </main>
       </>
