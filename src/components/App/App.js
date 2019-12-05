@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.scss';
+import { Route } from 'react-router-dom'
 import Header from '../Header/Header'
 import LandingForm from '../LandingForm/LandingForm'
 import MovieContainer from '../MovieContainer/MovieContainer'
+
 
 
 class App extends Component {
@@ -15,13 +17,13 @@ class App extends Component {
       rank: ''
     }
   }
-  
+
   componentDidMount() {
     fetch('https://swapi.co/api/films/')
       .then(res => res.json())
       .then(data => {
         let sortedMovies = data.results.sort((a, b) => a.episode_id - b.episode_id)
-        this.setState({movies: sortedMovies})
+        this.setState({ movies: sortedMovies })
       })
   }
 
@@ -35,23 +37,34 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-
-        <Header 
-        name={this.state.name}
-        rank={this.state.rank}
-        quote={this.state.quote}
-        signOut={this.signOut}
-        />
-        <LandingForm updateState={this.updateState}/>
-        <MovieContainer 
-          className='MovieContainer'
-          movies={this.state.movies}
-        />
-
-      </div>
-    )
+      <>
+        <header>
+        <Route path='/' render={() => 
+            <Header
+              name={this.state.name}
+              rank={this.state.rank}
+              quote={this.state.quote}
+              signOut={this.signOut}
+            />}
+          />
+        </header>
+        <main className="App">
+          <Route exact path='/' render={() => 
+            <LandingForm 
+            updateState={this.updateState} 
+            />} 
+          />
+          <Route path='/movies' render={() =>
+            <MovieContainer 
+            className='MovieContainer'
+            movies={this.state.movies}
+          />}
+          />
+  
+        </main>
+      </>
+      )
+    }
   }
-}
-
-export default App;
+  
+  export default App;
