@@ -5,6 +5,8 @@ import LandingForm from '../LandingForm/LandingForm';
 import { fetchData } from '../../fetchApis';
 import MovieContainer from '../MovieContainer/MovieContainer';
 import CharacterContainer from '../CharacterContainer/CharacterContainer';
+import { Route } from 'react-router-dom'
+
 
 
 
@@ -19,6 +21,7 @@ class App extends Component {
       currentMovie: null,
     }
   }
+
   
   componentDidMount = () => {
       fetchData()
@@ -62,7 +65,34 @@ class App extends Component {
         />}
       </div>
     )
+//       <>
+//         <header>
+//         <Route path='/' render={() => 
+//             <Header
+//               name={this.state.name}
+//               rank={this.state.rank}
+//               quote={this.state.quote}
+//               signOut={this.signOut}
+//             />}
+//           />
+//         </header>
+//         <main className="App">
+//           <Route exact path='/' render={() => 
+//             <LandingForm 
+//             updateState={this.updateState} 
+//             />} 
+//           />
+//           <Route path='/movies' render={() =>
+//             <MovieContainer 
+//             className='MovieContainer'
+//             movies={this.state.movies}
+//           />}
+//           />
+  
+//         </main>
+//       </>
+//       )
+//     }
   }
-}
-
-export default App;
+  
+  export default App;
