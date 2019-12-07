@@ -1,8 +1,8 @@
-import React from 'react'
-import './MovieContainer.scss'
-import MovieCard from '../MovieCard/MovieCard'
+import React from 'react';
+import './MovieContainer.scss';
+import MovieCard from '../MovieCard/MovieCard';
 
-const MovieContainer = ({ movies }) => {
+const MovieContainer = ({ movies, updateState }) => {
   let movieCards = movies.map(movie => {
     return (
       <MovieCard 
@@ -11,6 +11,8 @@ const MovieContainer = ({ movies }) => {
         episode={movie.episode_id}
         title={movie.title}
         releaseDate={movie.release_date}
+        get
+        updateState={updateState}
       />
     ) 
   })

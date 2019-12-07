@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './App.scss';
+import Header from '../Header/Header';
+import LandingForm from '../LandingForm/LandingForm';
+import { fetchData } from '../../fetchApis';
+import MovieContainer from '../MovieContainer/MovieContainer';
+import CharacterContainer from '../CharacterContainer/CharacterContainer';
 import { Route } from 'react-router-dom'
-import Header from '../Header/Header'
-import LandingForm from '../LandingForm/LandingForm'
-import MovieContainer from '../MovieContainer/MovieContainer'
+
 
 
 
@@ -11,21 +14,24 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      movies: [],
+      movies: [], 
       name: '',
       quote: '',
-      rank: ''
+      rank: '',
+      currentMovie: null,
     }
   }
 
-  componentDidMount() {
-    fetch('https://swapi.co/api/films/')
-      .then(res => res.json())
-      .then(data => {
-        let sortedMovies = data.results.sort((a, b) => a.episode_id - b.episode_id)
-        this.setState({ movies: sortedMovies })
-      })
-  }
+  
+  componentDidMount = () => {
+      fetchData()
+        .then(data => { return data })
+        .then(movieData => { 
+          console.log(movieData)
+          let sortedMovies = movieData.sort((a, b) => a.episode_id - b.episode_id)
+          this.setState({ movies: sortedMovies })})
+        .catch(error => console.log(error));
+    }
 
   updateState = (statesObj) => {
     this.setState(statesObj);
@@ -37,34 +43,56 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        <header>
-        <Route path='/' render={() => 
-            <Header
-              name={this.state.name}
-              rank={this.state.rank}
-              quote={this.state.quote}
-              signOut={this.signOut}
-            />}
+      <div className="App">
+
+        <Header 
+          name={this.state.name}
+          rank={this.state.rank}
+          quote={this.state.quote}
+          signOut={this.signOut}
+        />
+        <LandingForm 
+          updateState={this.updateState}
           />
-        </header>
-        <main className="App">
-          <Route exact path='/' render={() => 
-            <LandingForm 
-            updateState={this.updateState} 
-            />} 
-          />
-          <Route path='/movies' render={() =>
-            <MovieContainer 
-            className='MovieContainer'
-            movies={this.state.movies}
-          />}
-          />
+        <MovieContainer 
+          className='MovieContainer'
+          movies={this.state.movies}
+          updateState={this.updateState}
+        />
+        {this.state.currentMovie === null ? null :
+        <CharacterContainer
+          characters={this.state.movies[this.state.currentMovie].characters}
+        />}
+      </div>
+    )
+//       <>
+//         <header>
+//         <Route path='/' render={() => 
+//             <Header
+//               name={this.state.name}
+//               rank={this.state.rank}
+//               quote={this.state.quote}
+//               signOut={this.signOut}
+//             />}
+//           />
+//         </header>
+//         <main className="App">
+//           <Route exact path='/' render={() => 
+//             <LandingForm 
+//             updateState={this.updateState} 
+//             />} 
+//           />
+//           <Route path='/movies' render={() =>
+//             <MovieContainer 
+//             className='MovieContainer'
+//             movies={this.state.movies}
+//           />}
+//           />
   
-        </main>
-      </>
-      )
-    }
+//         </main>
+//       </>
+//       )
+//     }
   }
   
   export default App;

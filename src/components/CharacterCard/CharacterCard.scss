@@ -1,4 +1,4 @@
-.MovieCard {
+.character_card {
   border: 1px solid #f9d71c;
   display: flex;
   align-items: center;
@@ -9,24 +9,8 @@
   height: 400px;
   justify-content: space-around;
   background-color: #1a1a1a;
-}
 
-.characters-button {
-  width: 80%;
-  margin: 1%;
-  border-radius: 5px;
-  height: 30px;
-}
-
-h2 {
-  text-align: center;
-}
-
-h3 {
-  font-size: larger;
-}
-
-img {
-  height: 240px;
-  width: 200px;
+  p {
+    margin: 2%;
+  }
 }
