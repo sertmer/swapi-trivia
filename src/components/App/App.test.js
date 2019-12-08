@@ -10,12 +10,6 @@ describe('App', () => {
     wrapper = shallow(<App />)
   })
   
-  it('renders without crashing', () => {
-      const div = document.createElement('div')
-      ReactDOM.render(<App />, div)
-      ReactDOM.unmountComponentAtNode(div)
-  })
-
   it('should match the snapshot', () => {   
     expect(wrapper).toMatchSnapshot()
   })
@@ -25,7 +19,8 @@ describe('App', () => {
       movies: [],
       name: 'bob',
       quote: 'there is no try',
-      rank: 'Jedi Master'
+      rank: 'Jedi Master',
+      currentMovie: null
     }
 
     const defaultState = {
@@ -33,6 +28,7 @@ describe('App', () => {
       name: '',
       quote: '',
       rank: '',
+      currentMovie: null
     }
 
     wrapper.setState(defaultState)

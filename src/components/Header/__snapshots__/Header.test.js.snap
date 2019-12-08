@@ -5,9 +5,18 @@ exports[`Header should match the snapshot 1`] = `
   <h1>
     Star Wars Trivia Database
   </h1>
-  <p>
+  <h2>
      
-  </p>
-  <p />
+  </h2>
+  <h2 />
+  <Link
+    to="/"
+  >
+    <button
+      className="singout_button"
+    >
+      Sign Out
+    </button>
+  </Link>
 </nav>
 `;
