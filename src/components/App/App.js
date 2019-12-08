@@ -58,13 +58,15 @@ class App extends Component {
           className='MovieContainer'
           movies={this.state.movies}
           updateState={this.updateState}
-        />
+          />
         {this.state.currentMovie === null ? null :
         <CharacterContainer
-          characters={this.state.movies[this.state.currentMovie].characters}
+        characters={this.state.movies[this.state.currentMovie].characters}
         />}
       </div>
     )
+  }
+}
 //       <>
 //         <header>
 //         <Route path='/' render={() => 
@@ -93,6 +95,5 @@ class App extends Component {
 //       </>
 //       )
 //     }
-  }
   
-  export default App;
+export default App;
