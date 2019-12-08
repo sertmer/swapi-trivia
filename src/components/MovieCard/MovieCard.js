@@ -47,7 +47,6 @@ class MovieCard extends Component {
 export default MovieCard
 
 MovieCard.propTypes = {
-  key: PropTypes.number,
   episode: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   releaseDate: PropTypes.string.isRequired,
