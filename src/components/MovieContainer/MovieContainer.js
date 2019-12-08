@@ -1,6 +1,7 @@
 import React from 'react';
 import './MovieContainer.scss';
 import MovieCard from '../MovieCard/MovieCard';
+import PropTypes from 'prop-types'
 
 const MovieContainer = ({ movies, updateState }) => {
   let movieCards = movies.map(movie => {
@@ -24,3 +25,8 @@ const MovieContainer = ({ movies, updateState }) => {
 }
 
 export default MovieContainer
+
+MovieContainer.propTypes = {
+  movies: PropTypes.array.isRequired,
+  updateState: PropTypes.func.isRequired
+}
