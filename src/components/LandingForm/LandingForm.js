@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './LandingForm.scss'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 class LandingForm extends Component {
   constructor(props) {
@@ -74,3 +75,7 @@ class LandingForm extends Component {
 }
 
 export default LandingForm
+
+LandingForm.propTypes = { 
+  updateState: PropTypes.func.isRequired
+}
