@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.scss'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const Header = ({ name, rank, quote, signOut }) => {
   return (
@@ -20,3 +21,10 @@ const Header = ({ name, rank, quote, signOut }) => {
 }
 
 export default Header
+
+Header.propTypes = {
+  name: PropTypes.string.isRequired,
+  rank: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired,
+  signOut: PropTypes.func.isRequired
+}
