@@ -12,7 +12,6 @@ const MovieContainer = ({ movies, updateState }) => {
         episode={movie.episode_id}
         title={movie.title}
         releaseDate={movie.release_date}
-        get
         updateState={updateState}
       />
     ) 
