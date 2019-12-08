@@ -4,16 +4,29 @@ exports[`MovieCard should match the snapshot 1`] = `
 <article
   className="MovieCard"
 >
-  <h2>
-    Episode 
-    :
-  </h2>
-  <h3 />
-  <p>
-    Released:
-  </p>
-  <p />
-  <button>
+  <div>
+    <h2>
+      Episode 
+      :
+    </h2>
+    <h3 />
+  </div>
+  <div>
+    <img
+      alt="movie cover art"
+    />
+  </div>
+  <div>
+    <p>
+      Released:
+    </p>
+    <p />
+  </div>
+  <button
+    className="characters-button"
+    data-category={NaN}
+    onClick={[Function]}
+  >
     View Characters
   </button>
 </article>

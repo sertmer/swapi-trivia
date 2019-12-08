@@ -8,6 +8,7 @@ exports[`App should match the snapshot 1`] = `
     name=""
     quote=""
     rank=""
+    signOut={[Function]}
   />
   <LandingForm
     updateState={[Function]}
@@ -15,6 +16,7 @@ exports[`App should match the snapshot 1`] = `
   <MovieContainer
     className="MovieContainer"
     movies={Array []}
+    updateState={[Function]}
   />
 </div>
 `;
