@@ -1,6 +1,7 @@
 import React from 'react';
 import './CharacterContainer.scss';
 import CharacterCard from '../CharacterCard/CharacterCard';
+import PropTypes from 'prop-types'
 
 const CharacterContainer = ({ characters }) => {
   let characterCards = characters.map(character => {
@@ -24,3 +25,7 @@ const CharacterContainer = ({ characters }) => {
   }
 
 export default CharacterContainer
+
+CharacterContainer.propTypes = {
+  characters: PropTypes.array.isRequired
+}
