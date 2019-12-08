@@ -1,5 +1,6 @@
 import React, {Component}from 'react'
 import './MovieCard.scss'
+import { Link } from 'react-router-dom'
 import image1 from '../../images/1.jpg'
 import image2 from '../../images/2.jpg'
 import image3 from '../../images/3.jpg'
@@ -38,7 +39,14 @@ class MovieCard extends Component {
         <p>Released:</p>
         <p>{this.props.releaseDate}</p>
       </div>
-      <button className='characters-button' data-category={(this.props.episode - 1)} onClick={this.findCurrentMovie}>View Characters</button>
+      <Link to={`/movies/:${this.props.episode -1}`}>
+        <button 
+          className='characters-button' 
+          data-category={(this.props.episode - 1)} 
+          onClick={this.findCurrentMovie}
+          >View Characters
+        </button>
+      </Link>
     </article>
     )}
 }
