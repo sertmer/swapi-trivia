@@ -3,7 +3,7 @@ import './CharacterContainer.scss';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import PropTypes from 'prop-types'
 
-const CharacterContainer = ({ characters, crawl }) => {
+const CharacterContainer = ({ characters, crawl, updateFavorite }) => {
   let characterCards = characters.map(character => {
   return (
       <CharacterCard 
@@ -14,6 +14,7 @@ const CharacterContainer = ({ characters, crawl }) => {
       population={character.population}
       species={character.species}
       films={character.films}
+      updateFavorite={updateFavorite}
       />
       )
     })
@@ -28,5 +29,5 @@ const CharacterContainer = ({ characters, crawl }) => {
 export default CharacterContainer
 
 CharacterContainer.propTypes = {
-  characters: PropTypes.array.isRequired
+  characters: PropTypes.array.isRequired,
 }
