@@ -18,7 +18,7 @@ class App extends Component {
       name: '',
       quote: '',
       rank: '',
-      currentMovie: null,
+      currentMovie: null
     }
   }
 
@@ -27,7 +27,6 @@ class App extends Component {
       fetchData()
         .then(data => { return data })
         .then(movieData => { 
-          console.log(movieData)
           let sortedMovies = movieData.sort((a, b) => a.episode_id - b.episode_id)
           this.setState({ movies: sortedMovies })})
         .catch(error => console.log(error));
