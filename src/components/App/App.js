@@ -6,6 +6,7 @@ import { fetchData } from '../../fetchApis';
 import MovieContainer from '../MovieContainer/MovieContainer';
 import CharacterContainer from '../CharacterContainer/CharacterContainer';
 import { Route } from 'react-router-dom'
+import FavoriteContainer from '../FavoriteContainer/FavoriteContainer';
 
 
 
@@ -18,7 +19,8 @@ class App extends Component {
       name: '',
       quote: '',
       rank: '',
-      currentMovie: null
+      currentMovie: null,
+      favorites: []
     }
   }
 
@@ -34,6 +36,10 @@ class App extends Component {
 
   updateState = (statesObj) => {
     this.setState(statesObj);
+  }
+
+  updateFavorite = (favorite) => {
+    this.setState({ favorites: [...this.state.favorites, favorite]})
   }
 
   signOut = () => {
@@ -70,8 +76,17 @@ class App extends Component {
             return (
               <CharacterContainer
                 characters={this.state.movies[this.state.currentMovie].characters}
+                crawl={this.state.movies[this.state.currentMovie].opening_crawl}
+                updateFavorite={this.updateFavorite}
               />
             )} 
+          }/>
+          <Route path='/favorites' render={() => {
+          return (
+          <FavoriteContainer
+           characters={this.state.favorites}
+            />
+          )}
           }/>
         </main>
       </div>

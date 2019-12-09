@@ -16,6 +16,9 @@ const Header = ({ name, rank, quote, signOut }) => {
             Sign Out
         </button>
       </Link>
+      <Link to='/favorites'>
+      <button className='favorites_button'> Favorites </button>
+      </Link>
     </nav>
   )
 }
