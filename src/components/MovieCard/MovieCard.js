@@ -1,5 +1,6 @@
 import React, {Component}from 'react'
 import './MovieCard.scss'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import image1 from '../../images/1.jpg'
 import image2 from '../../images/2.jpg'
@@ -52,3 +53,10 @@ class MovieCard extends Component {
 }
 
 export default MovieCard
+
+MovieCard.propTypes = {
+  episode: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  releaseDate: PropTypes.string.isRequired,
+  updateState: PropTypes.func.isRequired
+}
