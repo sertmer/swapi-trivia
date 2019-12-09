@@ -72,6 +72,7 @@ class App extends Component {
             return (
               <CharacterContainer
                 characters={this.state.movies[this.state.currentMovie].characters}
+                crawl={this.state.movies[this.state.currentMovie].opening_crawl}
               />
             )} 
           }/>

@@ -3,7 +3,7 @@ import './CharacterContainer.scss';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import PropTypes from 'prop-types'
 
-const CharacterContainer = ({ characters }) => {
+const CharacterContainer = ({ characters, crawl }) => {
   let characterCards = characters.map(character => {
   return (
       <CharacterCard 
@@ -19,6 +19,7 @@ const CharacterContainer = ({ characters }) => {
     })
     return (
       <main>
+        <p>{crawl}</p>
         {characterCards}
       </main>
     )
