@@ -67,7 +67,6 @@ class App extends Component {
             />}
           />
           <Route path='/movies/:movie_id' render={({ match }) => {
-            console.log(match)
             return (
               <CharacterContainer
                 characters={this.state.movies[this.state.currentMovie].characters}
