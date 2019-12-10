@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LandingForm should match the snapshot 1`] = `
-<div>
+<div
+  className="landing_form"
+>
+  <h1>
+    Star Wars Trivia Database
+  </h1>
   <input
     className="form_name"
     name="name"
