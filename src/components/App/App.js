@@ -24,6 +24,11 @@ class App extends Component {
     }
   }
 
+  unFavoriteThis = (name) => {
+    let target = this.state.favorites.find(character => character.name === name)
+    let leftOverFavorites = this.state.favorites.filter(favorite => favorite !== target)
+    this.setState({favorites: leftOverFavorites})
+  }
   
   componentDidMount = () => {
       fetchData()
@@ -78,6 +83,7 @@ class App extends Component {
                 characters={this.state.movies[this.state.currentMovie].characters}
                 crawl={this.state.movies[this.state.currentMovie].opening_crawl}
                 updateFavorite={this.updateFavorite}
+                unFavoriteThis={this.unFavoriteThis}
               />
             )} 
           }/>
