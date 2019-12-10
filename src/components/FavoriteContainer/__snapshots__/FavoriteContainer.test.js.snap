@@ -12,7 +12,7 @@ exports[`FavoriteContainer should match the snapshot 1`] = `
     }
     homeworld="home"
     isFavorite={true}
-    key="1575950058661.0974"
+    key="1575951033731.804"
     name="bob"
     population="10000"
     species="human"
