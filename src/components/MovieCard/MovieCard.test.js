@@ -12,7 +12,13 @@ describe('MovieCard', () => {
     updateState: mockUpdateState
   }
   beforeEach(() => {
-    wrapper = shallow(<MovieCard {...mockProps}/>)
+    wrapper = shallow(
+    <MovieCard 
+      episode={1}
+      title='title'
+      releaseDate='12-12-12'
+      updateState={jest.fn}
+    />)
   })
 
   it('should match the snapshot', () => {   

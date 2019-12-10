@@ -11,7 +11,7 @@ exports[`MovieCard should match the snapshot 1`] = `
       :
     </h2>
     <h3>
-      spaceballs
+      title
     </h3>
   </div>
   <div>
