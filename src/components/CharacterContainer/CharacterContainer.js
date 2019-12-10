@@ -3,7 +3,7 @@ import './CharacterContainer.scss';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import PropTypes from 'prop-types'
 
-const CharacterContainer = ({ characters, crawl, updateFavorite }) => {
+const CharacterContainer = ({ characters, crawl, updateFavorite, unFavoriteThis }) => {
   let characterCards = characters.map(character => {
   return (
       <CharacterCard 
@@ -15,6 +15,7 @@ const CharacterContainer = ({ characters, crawl, updateFavorite }) => {
       species={character.species}
       films={character.films}
       updateFavorite={updateFavorite}
+      unFavoriteThis={unFavoriteThis}
       />
       )
     })
