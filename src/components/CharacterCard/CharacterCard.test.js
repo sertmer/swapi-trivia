@@ -4,18 +4,18 @@ import { shallow } from 'enzyme'
 
 describe('CharacterCard', () => {
   let wrapper
-  let mockProps = {
-    className: 'character_card',
-    key: 1,
-    name: 'bob',
-    homeworld: 'tatooine',
-    population: 2,
-    species: 'droid',
-    films: []
-  }
-
+  
   beforeEach(() => {
-    wrapper = shallow(<CharacterCard {...mockProps}/>)
+    wrapper = shallow(
+      <CharacterCard
+        name='bob'
+        homeworld={['home']}
+        population='11111'
+        species='human'
+        films={['film1']}
+        updateFavorite={jest.fn()}
+        unFavoriteThis={jest.fn()}
+      />)
   })
 
   it('should match the snapshot', () => {
