@@ -2,4 +2,9 @@ nav {
   display: flex;
   flex-direction: column;
 
+  .buttons_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }

@@ -36,7 +36,8 @@ class LandingForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className='landing_form'>
+        <h1>Star Wars Trivia Database</h1>
         <input 
           className='form_name' 
           type='text' 
