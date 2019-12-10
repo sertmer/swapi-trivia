@@ -5,19 +5,14 @@ import { shallow } from 'enzyme'
 describe('MovieCard', () => {
   let wrapper
   let mockUpdateState = jest.fn()
-  let mockProps = {
-    episode: 1,
-    title: 'spaceballs',
-    releaseDate: '12-12-12',
-    updateState: mockUpdateState
-  }
+  
   beforeEach(() => {
     wrapper = shallow(
     <MovieCard 
       episode={1}
       title='title'
       releaseDate='12-12-12'
-      updateState={jest.fn}
+      updateState={mockUpdateState}
     />)
   })
 
