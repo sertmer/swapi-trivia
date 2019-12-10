@@ -6,14 +6,26 @@ class CharacterCard extends Component {
   constructor(props) {
     super(props) 
       this.state = {
-      favorites: []
+      isFavorite: false
     }
   }
 
   favoriteThis = () => {
-    let character = this.props
+    console.log('props:', this.props)
+    let character = {
+      name: this.props.name,
+      isFavorite: true,
+      homeworld: this.props.homeworld,
+      population: this.props.population,
+      species: this.props.species,
+      films: this.props.films,
+      unFavoriteThis: this.props.unFavoriteThis
+    }
+    console.log('character', character)
     this.props.updateFavorite(character)
   }
+
+  
 
   render() {
   return (
@@ -23,7 +35,9 @@ class CharacterCard extends Component {
     <p> Population: {this.props.homeworld[1]} </p>
     <p> Species: {this.props.species} </p>
     <p> Related Films: {this.props.films} </p>
-    <button onClick={this.favoriteThis}>Favorite</button>
+    { this.props.isFavorite ? 
+    <button onClick={() => this.props.unFavoriteThis(this.props.name)}>Unfavorite</button> :
+      <button onClick={this.favoriteThis}>Favorite</button>}
     </article>
     )
   }
