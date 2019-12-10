@@ -28,3 +28,7 @@ const FavoriteContainer = ({ characters }) => {
 
 
 export default FavoriteContainer
+
+FavoriteContainer.propTypes = {
+  characters: PropTypes.array.isRequired
+}
