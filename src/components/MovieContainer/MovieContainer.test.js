@@ -10,8 +10,13 @@ describe('MovieContainer', () => {
     release_date: '12-12-12',
   }
 
+  let mockUpdateState = jest.fn()
   beforeEach(() => {
-    wrapper = shallow(<MovieContainer movies={[mockMovies]}/>)
+    wrapper = shallow(
+    <MovieContainer 
+      movies={[mockMovies]}
+      updateState={mockUpdateState}  
+    />)
   })
 
   it('should match the snapshot', () => {   
