@@ -22,7 +22,6 @@ class MovieCard extends Component {
   findCurrentMovie = (e) => {
     this.setState({ currentMovie: e.target.dataset.category})
     let currentMovie = e.target.dataset.category
-    console.log(currentMovie)
     this.props.updateState({ currentMovie })
   }
 
