@@ -31,4 +31,7 @@ export default CharacterContainer
 
 CharacterContainer.propTypes = {
   characters: PropTypes.array.isRequired,
+  crawl: PropTypes.string.isRequired, 
+  updateFavorite: PropTypes.func.isRequired,
+  unFavoriteThis: PropTypes.func.isRequired
 }

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteContainer should match the snapshot 1`] = `
+<main>
+  <CharacterCard
+    className="character_card"
+    films={
+      Array [
+        "1",
+        "2",
+      ]
+    }
+    homeworld={
+      Array [
+        "home",
+      ]
+    }
+    isFavorite={true}
+    key="bob"
+    name="bob"
+    population="10000"
+    species="human"
+    unFavoriteThis={[MockFunction]}
+  />
+</main>
+`;

@@ -1,3 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MovieContainer should match the snapshot 1`] = `<main />`;
+exports[`MovieContainer should match the loading snapshot 1`] = `<Loading />`;
+
+exports[`MovieContainer should match the snapshot 1`] = `
+<main>
+  <MovieCard
+    className="MovieCard"
+    episode="1"
+    key="1"
+    releaseDate="12-12-12"
+    title="spaceballs"
+    updateState={[MockFunction]}
+  />
+</main>
+`;

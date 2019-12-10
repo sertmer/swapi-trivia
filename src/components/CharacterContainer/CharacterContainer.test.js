@@ -6,7 +6,13 @@ describe('CharacterContainer', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = shallow(<CharacterContainer characters={[]}/>)
+    wrapper = shallow(
+    <CharacterContainer 
+      characters={[]} 
+      crawl={''} 
+      updateFavorite={jest.fn()}
+      unFavoriteThis={jest.fn()}
+    />)
   })
 
   it('should match the snapshot', () => {

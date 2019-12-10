@@ -22,7 +22,6 @@ class MovieCard extends Component {
   findCurrentMovie = (e) => {
     this.setState({ currentMovie: e.target.dataset.category})
     let currentMovie = e.target.dataset.category
-    console.log(currentMovie)
     this.props.updateState({ currentMovie })
   }
 
@@ -55,7 +54,7 @@ class MovieCard extends Component {
 export default MovieCard
 
 MovieCard.propTypes = {
-  episode: PropTypes.number.isRequired,
+  episode: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   releaseDate: PropTypes.string.isRequired,
   updateState: PropTypes.func.isRequired

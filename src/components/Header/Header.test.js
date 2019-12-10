@@ -6,7 +6,13 @@ describe('Header', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = shallow(<Header />)
+    wrapper = shallow(
+    <Header 
+      name='bob'
+      rank='expert'
+      quote='quote'
+      signOut={jest.fn()}
+    />)
   })
 
   it('should match the snapshot', () => {   

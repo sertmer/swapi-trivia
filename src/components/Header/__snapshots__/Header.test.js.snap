@@ -6,16 +6,30 @@ exports[`Header should match the snapshot 1`] = `
     Star Wars Trivia Database
   </h1>
   <h2>
+    expert
      
+    bob
   </h2>
-  <h2 />
+  <h2>
+    quote
+  </h2>
   <Link
     to="/"
   >
     <button
       className="singout_button"
+      onClick={[MockFunction]}
     >
       Sign Out
+    </button>
+  </Link>
+  <Link
+    to="/favorites"
+  >
+    <button
+      className="favorites_button"
+    >
+       Favorites 
     </button>
   </Link>
 </nav>
