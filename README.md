@@ -26,7 +26,7 @@ of specific movies, and get origin information about them. You are able to favor
 - Enzyme
 
 ## Screen Shots
-![alt text](./screenshots/1.png)
-![alt text](./screenshots/2.png)
-![alt text](./screenshots/3.png)
-![alt text](./screenshots/4.png)
+![alt text](https://https://github.com/sertmer/swapi-trivia/tree/master/screenshots/1.png)
+![alt text](https://https://github.com/sertmer/swapi-trivia/tree/master/screenshots/2.png)
+![alt text](https://https://github.com/sertmer/swapi-trivia/tree/master/screenshots/3.png)
+![alt text](https://https://github.com/sertmer/swapi-trivia/tree/master/screenshots/4.png)
