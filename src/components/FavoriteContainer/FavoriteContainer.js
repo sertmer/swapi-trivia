@@ -8,7 +8,7 @@ const FavoriteContainer = ({ characters }) => {
     return (
         <CharacterCard  
         className='character_card'
-        key={(Date.now() + Math.random())}
+        key={character.name}
         name={character.name}
         homeworld={character.homeworld}
         population={character.population}
