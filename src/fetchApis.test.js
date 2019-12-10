@@ -42,8 +42,8 @@ describe('fetchApis', () => {
     expect(window.fetch).toHaveBeenCalledWith('https://swapi.co/api/species/5')
   })
 
-  it('should return an array of species', () => {
-    expect(fetchSpecies('https://swapi.co/api/species/5')).resolves.toEqual(mockResponse)
+  it('should return an name of species', () => {
+    expect(fetchSpecies('https://swapi.co/api/species/5')).resolves.toEqual(mockResponse.name)
   })
   })
 })
