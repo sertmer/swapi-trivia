@@ -18,5 +18,14 @@ exports[`Header should match the snapshot 1`] = `
       Sign Out
     </button>
   </Link>
+  <Link
+    to="/favorites"
+  >
+    <button
+      className="favorites_button"
+    >
+       Favorites 
+    </button>
+  </Link>
 </nav>
 `;

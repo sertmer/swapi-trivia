@@ -22,12 +22,16 @@ exports[`MovieCard should match the snapshot 1`] = `
     </p>
     <p />
   </div>
-  <button
-    className="characters-button"
-    data-category={NaN}
-    onClick={[Function]}
+  <Link
+    to="/movies/:NaN"
   >
-    View Characters
-  </button>
+    <button
+      className="characters-button"
+      data-category={NaN}
+      onClick={[Function]}
+    >
+      View Characters
+    </button>
+  </Link>
 </article>
 `;
