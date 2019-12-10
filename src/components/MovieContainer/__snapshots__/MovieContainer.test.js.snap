@@ -6,6 +6,8 @@ exports[`MovieContainer should match the snapshot 1`] = `
 <main>
   <MovieCard
     className="MovieCard"
+    episode="1"
+    key="1"
     releaseDate="12-12-12"
     title="spaceballs"
     updateState={[MockFunction]}

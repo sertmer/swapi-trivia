@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 describe('MovieContainer', () => {
   let wrapper
   let mockMovies = {
-    episode: 1,
+    episode_id: '1',
     title: 'spaceballs',
     release_date: '12-12-12',
   }
@@ -24,7 +24,11 @@ describe('MovieContainer', () => {
   })
 
   it('should match the loading snapshot', () => {
-    wrapper = shallow(<MovieContainer movies={[]}/>)
+    wrapper = shallow(
+      <MovieContainer 
+        movies={[]}
+        updateState={mockUpdateState}
+      />)
     expect(wrapper).toMatchSnapshot()
   })
 })

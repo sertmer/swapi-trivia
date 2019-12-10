@@ -9,7 +9,7 @@ describe('MovieCard', () => {
   beforeEach(() => {
     wrapper = shallow(
     <MovieCard 
-      episode={1}
+      episode='1'
       title='title'
       releaseDate='12-12-12'
       updateState={mockUpdateState}
