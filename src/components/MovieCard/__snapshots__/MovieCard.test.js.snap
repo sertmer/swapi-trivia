@@ -7,27 +7,33 @@ exports[`MovieCard should match the snapshot 1`] = `
   <div>
     <h2>
       Episode 
+      1
       :
     </h2>
-    <h3 />
+    <h3>
+      spaceballs
+    </h3>
   </div>
   <div>
     <img
       alt="movie cover art"
+      src="1.jpg"
     />
   </div>
   <div>
     <p>
       Released:
     </p>
-    <p />
+    <p>
+      12-12-12
+    </p>
   </div>
   <Link
-    to="/movies/:NaN"
+    to="/movies/:0"
   >
     <button
       className="characters-button"
-      data-category={NaN}
+      data-category={0}
       onClick={[Function]}
     >
       View Characters
