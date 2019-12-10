@@ -14,6 +14,8 @@ const FavoriteContainer = ({ characters }) => {
         population={character.population}
         species={character.species}
         films={character.films}
+        isFavorite={character.isFavorite}
+        unFavoriteThis={character.unFavoriteThis}
         />
         )
       })
