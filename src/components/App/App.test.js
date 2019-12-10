@@ -20,7 +20,8 @@ describe('App', () => {
       name: 'bob',
       quote: 'there is no try',
       rank: 'Jedi Master',
-      currentMovie: null
+      currentMovie: null,
+      favorites: []
     }
 
     const defaultState = {
@@ -28,7 +29,8 @@ describe('App', () => {
       name: '',
       quote: '',
       rank: '',
-      currentMovie: null
+      currentMovie: null,
+      favorites: []
     }
 
     wrapper.setState(defaultState)
