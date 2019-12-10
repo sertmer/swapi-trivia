@@ -4,12 +4,7 @@ exports[`App should match the snapshot 1`] = `
 <div
   className="App"
 >
-  <header>
-    <Route
-      path="/"
-      render={[Function]}
-    />
-  </header>
+  <p />
   <main>
     <Route
       exact={true}
