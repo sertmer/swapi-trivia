@@ -6,7 +6,7 @@ describe('FavoriteContainer', () => {
   let wrapper
   let mockCharacters = [{
     name: 'bob',
-    homeworld: 'home',
+    homeworld: ['home'],
     population: '10000',
     species: 'human',
     films: ['1', '2'],
