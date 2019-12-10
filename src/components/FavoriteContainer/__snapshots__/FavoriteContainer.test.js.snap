@@ -10,7 +10,11 @@ exports[`FavoriteContainer should match the snapshot 1`] = `
         "2",
       ]
     }
-    homeworld="home"
+    homeworld={
+      Array [
+        "home",
+      ]
+    }
     isFavorite={true}
     key="bob"
     name="bob"
