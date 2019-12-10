@@ -1,16 +1,38 @@
+.landing_form {
+  border: 2px solid #f9d71c;
+  height: 250px;
+  width: 500px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20%;
+  background-color: black;
+}
+
 div {
   display: flex;
   flex-direction: column;
   text-align: center;
   
+  h1 {
+    color: #f9d71c;
+  }
+
   input {
     height: 30px;
     width: 250px;
     margin: 2%;
   }
+
   button {
-    height: 20px;
+    height: 25px;
     margin: 2%;
-    width: 270px;
+    width: 200px;
+    border: 1px solid #f9d71c;
+    background: black;
+    color: #f9d71c;
+  }
+
+  .rank-menu {
+    width: 40%;
   }
 }

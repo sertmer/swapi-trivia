@@ -54,7 +54,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
+       {this.state.name === '' ? <p></p>
+        : <header>
           <Route path='/' render={() => 
             <Header 
                 name={this.state.name}
@@ -63,7 +64,7 @@ class App extends Component {
                 signOut={this.signOut}
             />}
           /> 
-        </header>
+        </header>}
         <main>
           <Route exact path='/' render={() => 
             <LandingForm 

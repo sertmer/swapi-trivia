@@ -7,18 +7,23 @@ const Header = ({ name, rank, quote, signOut }) => {
   return (
     <nav>
       <h1>Star Wars Trivia Database</h1>
+      <div className='buttons_div'>
+        <Link to='/'>
+          <button
+              className='singout_button'
+              onClick={signOut}>
+              Sign Out
+          </button>
+        </Link>
+        <Link to='/favorites'>
+        <button className='favorites_button'> Favorites </button>
+        </Link>
+        <Link to='/movies'>
+        <button className='movies_button'> Movies </button>
+        </Link>
+      </div>
       <h2>{rank} {name}</h2>
       <h2>{quote}</h2>
-      <Link to='/'>
-        <button
-            className='singout_button'
-            onClick={signOut}>
-            Sign Out
-        </button>
-      </Link>
-      <Link to='/favorites'>
-      <button className='favorites_button'> Favorites </button>
-      </Link>
     </nav>
   )
 }
