@@ -47,7 +47,7 @@ describe('LandingForm', () => {
       isFinished: true
     }
     
-    
+
     wrapper.setState(mockFinishedState)
     wrapper.find('.form_button').simulate('click')
     
