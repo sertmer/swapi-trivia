@@ -5,8 +5,9 @@ import { shallow } from 'enzyme'
 describe('LandingForm', () => {
   let wrapper
 
+  let mockUpdateState = jest.fn()
   beforeEach(() => {
-    wrapper = shallow(<LandingForm updateState={jest.fn()}/>)
+    wrapper = shallow(<LandingForm updateState={mockUpdateState}/>)
   })
 
   it('should match the snapshot', () => {   
@@ -38,7 +39,7 @@ describe('LandingForm', () => {
     expect(wrapper.state('isFinished')).toEqual(true)
   })
 
-  it.skip('should call submitInfo when the button is clicked', () => {
+  it('submitInfo should call updateState when the button is clicked', () => {
     const mockFinishedState = {
       name: 'bob',
       quote: 'there is no try',
@@ -46,10 +47,13 @@ describe('LandingForm', () => {
       isFinished: true
     }
     
+    
     wrapper.setState(mockFinishedState)
-    wrapper.instance().submitInfo = jest.fn()
     wrapper.find('.form_button').simulate('click')
+    
 
-    expect(wrapper.instance().submitInfo).toHaveBeenCalled()
+    expect(wrapper.instance().props.updateState).toHaveBeenCalledWith({name: 'bob',
+    quote: 'there is no try',
+    rank: 'Jedi Knight'})
   })
 })
